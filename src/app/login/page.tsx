@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Input from "../components/input/input";
+import loginBackgroundImage from "../assets/images/login-background-photo.png";
 
 export default function Login() {
 
@@ -15,9 +16,17 @@ export default function Login() {
 
     return (
         <>
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center h-screen min-h-screen"
+    style={{
+        backgroundImage: `url(${loginBackgroundImage.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh",
+        position: "relative",
+      }}
+    >
 
-        <div className="bg-white shadow-md rounded-lg p-6 w-96">
+        <div className="p-4 bg-white shadow-md rounded-lg p-6 w-96">
             <h2 className="text-black text-2xl font-semibold text-center mb-4">Entrar</h2>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -36,6 +45,14 @@ export default function Login() {
             </p>
         </div>
         
+        {/* <div className="">
+            <h1>Bem-vindo !</h1>
+            <Image
+                src={loginPhotoBig}
+                alt="imagem de boas-vindas"
+                width={612}
+                height={408}/>
+        </div> */}
     </div>
         </>
     )
