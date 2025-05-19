@@ -19,7 +19,7 @@ export default function Login() {
             <>
             <div className="relative min-h-screen bg-gray-100">
 
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 bg-white shadow-md rounded-lg p-6 w-96">
+                <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 p-4 bg-white shadow-md rounded-lg p-6 w-96 mr-100px">
                     <h2 className="text-black text-2xl font-semibold text-center mb-4">Entrar</h2>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
@@ -55,7 +55,7 @@ export default function Login() {
                     </button> {/* Direcionar E-mail para backend e definir recuperação*/}
                 </div>
 
-                    <p className="absolute left-1/2 -translate-x-1/2 bottom-[60px] mt-4 text-[#121212] text-center text-sm">
+                    <p className="absolute left-1/3 -translate-x-1/2 bottom-[60px] mt-4 text-[#121212] text-center text-sm">
                         Não possui conta? <a href="/register" className="text-[#0B9D9A] hover:underline">Clique Aqui</a>
                     </p>
                 
