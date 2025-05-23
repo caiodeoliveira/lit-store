@@ -1,30 +1,68 @@
 "use client"
 
-import React, { useState } from "react";
-import Input from "../components/input/input";
 import Image from "next/image";
 import loginPhotoBig from "../assets/images/login-page-background.png";
+import { useForm } from "react-hook-form";
+import { LoginSchema, loginSchema } from "../_validators/login-validators";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Input from "../components/input/Input";
+
 
 export default function Login() {
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { register, handleSubmit } = useForm({
+        resolver: zodResolver(loginSchema)
+    });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Login:", { email, password });
+
+  const onSubmit = (data: LoginSchema) => {
+    console.log("E-mail: ", data.email);
+    console.log("Senha: ", data.password);
   };
 
-    return (
-            <>
-            <div className="relative min-h-screen bg-gray-100">
 
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 bg-white shadow-md rounded-lg p-6 w-96">
+    return (
+        <>
+            <div className="relative min-h-screen bg-white">
+
+                <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 p-4 bg-white shadow-md rounded-lg p-6 w-96 mr-100px">
                     <h2 className="text-black text-2xl font-semibold text-center mb-4">Entrar</h2>
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <Input placeholder={"Ex:lucas.93@gmail.com"} label="E-mail" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <Input placeholder={"Digite sua senha"} label="Senha" type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 text-black">
+                        <Input 
+                            className="
+                                text-black
+                                border-[#AEB0B3B2]
+                                border
+                                rounded-md
+                                px-3
+                                py-2
+                                outline-none
+                                focus:ring-2
+                                focus:ring-blue-500"
+                            placeholder={"Ex:lucas.93@gmail.com"}
+                            label="E-mail"
+                            type="email"
+                            id="email"
+                            {...register("email")}/>
+                        <Input
+                            className="
+                                text-black
+                                border-[#AEB0B3B2]
+                                border
+                                rounded-md
+                                px-3
+                                py-2
+                                outline-none
+                                focus:ring-2
+                                focus:ring-blue-500"
+                            placeholder={"Digite sua senha"}
+                            label="Senha"
+                            type="password"
+                            id="password"
+                            {...register("password")}
+
+                        />
 
                         <button type="submit" className="w-full bg-[#0B9D9A] text-white py-2 rounded-md hover:bg-[#038886] transition cursor-pointer">
                         Entrar
@@ -49,13 +87,12 @@ export default function Login() {
                             block mx-auto
                             mt-5
                             cursor-pointer
-                            hover:text-[#0B9D9A]
-                            ">
+                            hover:text-[#0B9D9A]">
                         Esqueci minha senha
                     </button> {/* Direcionar E-mail para backend e definir recuperação*/}
                 </div>
 
-                    <p className="absolute left-1/2 -translate-x-1/2 bottom-[60px] mt-4 text-[#121212] text-center text-sm">
+                    <p className="absolute left-1/3 -translate-x-1/2 bottom-[60px] mt-4 text-[#121212] text-center text-sm">
                         Não possui conta? <a href="/register" className="text-[#0B9D9A] hover:underline">Clique Aqui</a>
                     </p>
                 
@@ -71,6 +108,6 @@ export default function Login() {
                         height={800}/>
                 </div>
             </div>
-            </>
+        </>
     )
 }

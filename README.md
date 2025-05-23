@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+Ferramental:
+
+tailwind
+feather-icons
+React-hook-form
+zod
+
+imagens:
+
+Pixabay: https://pixabay.com/pt/photos/cafeteria-garota-livro-lendo-ler-5972490/
+FreePik: {
+
+https://www.freepik.com/search?format=search&last_filter=query&last_value=Banner+book&query=Banner+book
+
+https://www.freepik.com/free-psd/psychological-therapy-banner-design_8790613.htm#fromView=search&page=1&position=32&uuid=cdac1e08-7845-4dd9-84ae-d771f0b4a022&query=the+fault+is+in+our+starts+Banner+book?log-in=google
+
+https://loja.jesuscopy.com/biblias
+
+https://chicorei.com/caneca
+}
