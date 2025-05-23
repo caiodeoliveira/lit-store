@@ -1,11 +1,11 @@
 "use client"
 
-import Input from "../components/input/input";
 import Image from "next/image";
 import loginPhotoBig from "../assets/images/login-page-background.png";
 import { useForm } from "react-hook-form";
 import { LoginSchema, loginSchema } from "../_validators/login-validators";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Input from "../components/input/Input";
 
 
 export default function Login() {
@@ -23,13 +23,13 @@ export default function Login() {
 
     return (
         <>
-            <div className="relative min-h-screen bg-gray-100">
+            <div className="relative min-h-screen bg-white">
 
                 <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 p-4 bg-white shadow-md rounded-lg p-6 w-96 mr-100px">
                     <h2 className="text-black text-2xl font-semibold text-center mb-4">Entrar</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 text-black">
-                        <Input
+                        <Input 
                             className="
                                 text-black
                                 border-[#AEB0B3B2]
@@ -44,8 +44,7 @@ export default function Login() {
                             label="E-mail"
                             type="email"
                             id="email"
-                            {...register("email")}
-                        />
+                            {...register("email")}/>
                         <Input
                             className="
                                 text-black
