@@ -40,3 +40,9 @@ Fontes das imagens utilizadas no projeto:
     - Bíblias - JesusCopy
     - Canecas - Chicorei
 
+OBS: Foi feita a construção do que foi possível dentro do prazo (Isso vai explicar certos erros de identação, por exemplo). Não ocorreram limitações / dificuldades que causassem impedimento. Após o desafio, defini os próximos passos para o projeto:
+
+1 - 
+2 - Implementar o Backend com Node.js
+3 - Implementar regras de negócio (começando com a autenticação de usuário)
+4 - CI/CD para automatização de processos com o próprio Github Actions.
