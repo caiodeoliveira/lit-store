@@ -18,12 +18,10 @@ export default function Home() {
 
   return (
     <div className="grid grid-cols-[250px_1fr] h-screen">
-      {/* Coluna esquerda: Sidenav */}
       <div>
         <SideNav />
       </div>
 
-      {/* Coluna direita: Header no topo e conteúdo abaixo */}
       <div className="flex flex-col h-full">
         <Header hasItemsInCart={true}/>
         <main className="grid gap-6 p-6 overflow-y-auto">

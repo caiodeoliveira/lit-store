@@ -34,12 +34,10 @@ const produtos = [
 const NewArrivals = () => {
   return (
     <div className="grid grid-cols-1 mx-auto mt-20 w-full max-w-[95%]">
-      {/* Header com título e botão "Ver mais" */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-[#11131A] text-2xl font-semibold">Novidades</h2>
       </div>
 
-      {/* Container dos produtos com 4 colunas */}
       <div className="grid grid-cols-4 gap-4">
         {produtos.map((produto, index) => (
           <div key={index} className="flex flex-col items-left">

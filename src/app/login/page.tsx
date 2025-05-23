@@ -68,7 +68,7 @@ export default function Login() {
                         Entrar
                         </button>
                     </form>
-                    {/* TODO: Definir como font global a DM Sans */}
+                    
                     <button
                         className="
                             w-[168px]
@@ -89,7 +89,7 @@ export default function Login() {
                             cursor-pointer
                             hover:text-[#0B9D9A]">
                         Esqueci minha senha
-                    </button> {/* Direcionar E-mail para backend e definir recuperação*/}
+                    </button>
                 </div>
 
                     <p className="absolute left-1/3 -translate-x-1/2 bottom-[60px] mt-4 text-[#121212] text-center text-sm">

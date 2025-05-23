@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import CartImage from "../../components/cart-image/CartImage";
-import Modal from "../modal/Modal"; // ajuste o caminho conforme sua estrutura
+import Modal from "../modal/Modal";
 
 interface HeaderProps {
-  hasItemsInCart: boolean; // Estado booleano recebido via prop
+  hasItemsInCart: boolean; 
 }
 
 export default function Header({ hasItemsInCart }: HeaderProps) {

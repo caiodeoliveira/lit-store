@@ -18,7 +18,6 @@ const OpenColapseButton = () => {
             <button
               className="flex items-center justify-center cursor-pointer"
             >
-              {/* Usamos o ChevronDown e, via CSS, rotacionamos se necessário */}
               <ChevronDown
                 className={`w-4 h-4 transition-transform duration-300 ${
                   isBooksOpen ? "rotate-0" : "-rotate-90"
@@ -27,7 +26,6 @@ const OpenColapseButton = () => {
             </button>
           </div>
 
-          {/* Subitens de "Todos Livros" - aparece/suma conforme o estado */}
           {isBooksOpen && (
             <div className="grid gap-2 pl-8">
               {todosLivrosSubItems.map((item, index) => (

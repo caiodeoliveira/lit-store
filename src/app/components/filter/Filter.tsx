@@ -29,7 +29,6 @@ const Filter = ({ selectedCategory, setSelectedCategory }: FilterProps) => {
           }`}
           onClick={() => {
             if (category !== "Todos" && selectedCategory === category) {
-              // Se um filtro (exceto "Todos") já ativo for clicado novamente, volta a ativar "Todos"
               setSelectedCategory("Todos");
             } else {
               setSelectedCategory(category);

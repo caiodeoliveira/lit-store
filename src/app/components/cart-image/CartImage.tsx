@@ -4,7 +4,7 @@ import React from "react";
 import { RiShoppingBag4Line } from "react-icons/ri";
 
 interface CartImageProps {
-  visible?: boolean; // se false, não renderiza nada
+  visible?: boolean;
   onClick?: () => void;
 }
 

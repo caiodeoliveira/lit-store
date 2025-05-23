@@ -12,7 +12,7 @@ import {
 } from "react-feather";
 
 const SideNav = () => {
-  // Verifica se estamos na página de login
+  
   const pathname = usePathname();
   if (pathname === "/login") return null;
 
@@ -30,21 +30,17 @@ const SideNav = () => {
         <h1 className="text-xl font-bold">LitStore</h1>
       </header>
 
-      {/* Container de menus com espaçamento e altura definidos */}
       <div className="grid gap-6 p-4 h-[calc(90vh-60px)]">
-        {/* Item 1: Início */}
         <div className="grid grid-cols-[20%_80%] items-center gap-x-2 p-3 rounded cursor-pointer hover:bg-[#F7F7F7]">
           <Home className="w-6 h-6" />
           <span className="text-[16px] font-bold">Início</span>
         </div>
 
-        {/* Item 2: Notificações */}
         <div className="grid grid-cols-[20%_80%] items-center gap-x-2 p-3 rounded cursor-pointer hover:bg-[#F7F7F7]">
           <Bell className="w-6 h-6" />
           <span className="text-[16px] font-bold">Notificações</span>
         </div>
 
-        {/* Item 3: Todos Livros com open/collapse */}
         <div
           className="grid grid-cols-[20%_60%_20%] items-center gap-x-2 p-2 rounded cursor-pointer hover:bg-[#F7F7F7]"
           onClick={() => setIsBooksOpen((prev) => !prev)}
@@ -66,7 +62,6 @@ const SideNav = () => {
           </button>
         </div>
 
-        {/* Subitens de "Todos Livros" */}
         {isBooksOpen && (
           <div className="grid gap-2 pl-8">
             {todosLivrosSubItems.map((item, index) => (
@@ -82,14 +77,12 @@ const SideNav = () => {
           </div>
         )}
 
-        {/* Item 4: Configurações */}
         <div className="grid grid-cols-[20%_80%] items-center gap-x-2 p-3 rounded cursor-pointer hover:bg-[#F7F7F7]">
           <Settings className="w-6 h-6" />
           <span className="text-[16px] font-bold">Configurações</span>
         </div>
       </div>
 
-      {/* Botão de expandir/colapsar */}
       <div className="absolute bottom-4 right-4">
         <button
           onClick={() => setIsCollapsed((prev) => !prev)}

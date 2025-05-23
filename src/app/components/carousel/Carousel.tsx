@@ -50,7 +50,7 @@ function switchBanner(index: number) {
   banners.forEach((banner) => {
     const bannerIndex = parseInt(banner.getAttribute("data-index") ?? "0");
     
-    if (banner.tagName === "IMG") { // Só altera a opacidade das imagens
+    if (banner.tagName === "IMG") {
       banner.classList.toggle("opacity-100", bannerIndex === index);
       banner.classList.toggle("opacity-0", bannerIndex !== index);
     }
